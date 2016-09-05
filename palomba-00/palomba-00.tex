@@ -1,0 +1,85 @@
+\documentclass[a4paper]{article}
+\usepackage[letterpaper, margin=1in]{geometry} % page format
+\usepackage{listings} % this package is for including code
+\usepackage{graphicx} % this package is for including figures
+\usepackage{amsmath}  % this package is for math and matrices
+\usepackage{amsfonts} % this package is for math fonts
+\usepackage{tikz} % for drawings
+\usepackage{hyperref} % for urls
+
+\title{Homework 00}
+\author{Alex Palomba}
+\date{9/5/16}
+
+\begin{document}
+\lstset{language=Python}
+
+\maketitle
+
+\section{Course Setup}
+
+\subsection{Python Requirements}
+Proof that I have successfully installed Python and all of the necessary packages is included in this folder as a screenshot titled $PythonProof.jpg$
+
+\subsection{GitHub Class Repository}
+My GitHub username is alexPalomba
+Proof that I have added $pablorp80$ as a collaborator is included in this folder as a screenshot titled $GitHubProof.jpg$
+
+\subsection{Kaggle Account}
+My Kaggle username is alexPalomba; my display name is Plombo
+Proof that I have created an account is included in this folder as a screenshot titled $KaggleProof.jpg$
+
+\section{Problems}
+
+\subsection{Problem 1}
+g(x) = -3x^2_+24x - 30
+Take the derivative and set to zero, then solve for x:
+0 = -6x+24
+24 = -6x
+x = -4
+
+\subsection{Problem 2}
+I didn't understand how to do this one.
+
+\subsection{Problem 3}
+a) No you cannot. Matrices can only be multiplied if the number of columns in the first matrix is equal to the number of rows in the second matrix. 
+b)I tried to figure out how to verify this in python and couldn't, but the answer is 
+\begin{lstlisting}
+> python hw1.7.1.py 
+[(-4+0) (2+0) (6+0)]
+[(-1+0) (-4+0) (3+0)]
+[(14+0) (-9+0) (28-25)]
+\end{lstlisting}
+
+\begin{lstlisting}
+> python hw1.7.1.py 
+[(-4) (2) (6)]
+[(-1) (-4) (3)]
+[(14) (-9) (3)]
+\end{lstlisting}
+
+\subsection{Problem 4}
+Simple Gaussian = a probability distribution that associates the normal random variable X with a cumulative probability. (Source: stattrek.com)
+Multivariate Gaussian = a generalization of the one-dimensional normal distribution to higher dimensions. (Source: en.wikipedia.org)
+Bernoulli = The Bernoulli distribution is a discrete distribution having two possible outcomes labelled by n=0 and n=1 in which n=1 ("success") 
+occurs with probability  p and n=0 ("failure") occurs with probability q=1-p, where 0<p<1. (Source: mathworld.wolfram.com)
+Binomial = a frequency distribution of the possible number of successful outcomes in a given number of trials in each of which there is the same probability of success. (Source: google search)
+Exponential = is the probability distribution that describes the time between events in  
+a process in which events occur continuously and independently at a constant average rate. It is a particular case of the gamma distribution. (Source: en.wikipedia.org)
+
+\subsection{Problem 6}
+I didn't understand how to do this one either.
+
+\subsection{Problem 7}
+a) given that the euclidean distance is the shortest distance between two points, if y is 1.1 then x* is 1 (the closest value within the set of all natural numbers). 
+b) x* is the point on the edge of the circle closest to y.
+
+\subsection{Problem 8}
+I still don't understand how to do this one.
+
+
+\section{Conclusions}
+I'm honestly not sure if I did this assignment correctly, but I did my best - even if I couldn't answer all the questions (most of which were on material not covered in the prerequisite classes) and probably got most of the \LaTeX formatting wrong. Please let me know what I did wrong so I can hopefully improve on it in the future.
+
+
+\end{document}
