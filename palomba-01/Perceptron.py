@@ -90,5 +90,5 @@ class Perceptron:
         check_pts = self.generate_points(M)
         return self.classification_error(vec, pts=check_pts)
 		
-p = Perceptron(1000)
+p = Perceptron(20)
 p.pla(save = True)

@@ -6,14 +6,15 @@ import matplotlib.pyplot as plt
 class Perceptron:
     def __init__(self, N):
         # Random linearly separated data
-        xA,yA,xB,yB = [random.uniform(-1, 1) for i in range(4)]
-        self.V = np.array([xB*yA-xA*yB, yB-yA, xA-xB])
+        #x1A,x2A,x3A,x4A,x5A,x6A,x10A,x1B,x2B,x3B,x4B,x5B,x6B,x7B,x8B,x9B,x10B = [random.uniform(-1, 1) for i in range(20)]
+        self.V = (np.random.rand(11)*2)-1
+		#self.V = np.array([xB*yA-xA*yB, yB-yA, xA-xB])
         self.X = self.generate_points(N)
  
     def generate_points(self, N):
         X = []
         for i in range(N):
-            x1,x2,x3,x4,x5,x6,x7,x8,x9,x10 = [random.uniform(-1, 1) for i in range(2)]
+            x1,x2,x3,x4,x5,x6,x7,x8,x9,x10 = [random.uniform(-1, 1) for i in range(10)]
             x = np.array([1,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10])
             s = int(np.sign(self.V.T.dot(x)))
             X.append((x, s))
@@ -68,7 +69,7 @@ class Perceptron:
  
     def pla(self, save=False):
         # Initialize the weigths to zeros
-        w = np.zeros(3)
+        w = np.zeros(11)
         X, N = self.X, len(self.X)
         it = 0
         # Iterate until all points are correctly classified
@@ -85,10 +86,12 @@ class Perceptron:
                 plt.savefig('p_N%s_it%s' % (str(N),str(it)), \
                             dpi=200, bbox_inches='tight')
         self.w = w
+		
+        return it #number of iterations
  
     def check_error(self, M, vec):
         check_pts = self.generate_points(M)
         return self.classification_error(vec, pts=check_pts)
 		
-p = Perceptron(20)
-p.pla(save = True)
+p = Perceptron(1000)
+it = p.pla(save = True)
